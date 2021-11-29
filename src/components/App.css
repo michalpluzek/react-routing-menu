@@ -38,3 +38,15 @@ section {
   padding-top: 30px;
   text-align: center;
 }
+
+.active {
+  border-bottom: 4px solid yellow;
+}
+
+.news_selected {
+  border-bottom: 4px solid orange;
+}
+
+.contact_selected {
+  border-bottom: 4px solid red;
+}

@@ -1,6 +1,11 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  NavLink,
+  Route,
+  Routes,
+} from "react-router-dom";
 import Home from "./Home";
 import News from "./News";
 import Contact from "./Contact";
@@ -14,13 +19,23 @@ class App extends React.Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Start</Link>
+                  <NavLink to="/">Start</NavLink>
                 </li>
                 <li>
-                  <Link to="/news">Aktualności</Link>
+                  <NavLink
+                    to="/news"
+                    className={({ isActive }) => isActive && "news_selected"}
+                  >
+                    Aktualności
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/contact">Kontakt</Link>
+                  <NavLink
+                    to="/contact"
+                    className={({ isActive }) => isActive && "contact_selected"}
+                  >
+                    Kontakt
+                  </NavLink>
                 </li>
               </ul>
             </nav>
