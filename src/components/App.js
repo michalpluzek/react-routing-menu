@@ -9,6 +9,7 @@ import {
 import Home from "./Home";
 import News from "./News";
 import Contact from "./Contact";
+import ErrorPage from "./ErrorPage";
 
 class App extends React.Component {
   render() {
@@ -45,6 +46,7 @@ class App extends React.Component {
               <Route path="/" element={<Home />} />
               <Route path="/news" element={<News />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<ErrorPage />} />
             </Routes>
           </section>
         </div>
